@@ -1,0 +1,425 @@
+@font-face {
+    font-family: 'Tourney';
+    font-style: normal;
+    font-weight: 100;
+    font-stretch: 100%;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/tourney/v11/AlZa_ztDtYzv1tzq1wcJnbVt7xseomk-tNs7qrzTWbyt8n7GOQBCYjB0.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
+@font-face {
+    font-family: 'Bebas Neue';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/bebasneue/v10/JTUSjIg69CK48gW7PXoo9Wlhyw.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
+@font-face {
+    font-family: 'Teko';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/teko/v16/LYjNdG7kmE0gfaN9pQ.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
+body {
+    background: url(./bg_main.jpg);
+}
+
+html {
+    max-width: 60%;
+    min-width: 50rem;
+    margin: auto;
+}
+
+.main_nav {
+    position: sticky;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.625rem 3.125rem 0.625rem 3.125rem;
+    border-bottom: 0.125rem solid #a70000;
+    border-top: 0.125rem solid #a70000;
+}
+
+.h1_nav {
+    font-family: "Tourney";
+    color: white;
+    font-size: 2rem;
+}
+
+.buttons_nav {
+    word-spacing: 0.313rem;
+}
+
+.buttons {
+    font-family: "Bebas Neue";
+    font-size: 1.1rem;
+    color: white;
+    background-color: #a70000;
+    border-width: 0;
+    border-radius: 0.188rem;
+    padding: 0.125rem 0.813rem;
+    margin: 0rem 0.313rem;
+    transition: border-width 0.2s ease, transform 0.2s ease, margin-bottom 0.2s ease, box-shadow 0.2s ease;
+}
+
+.buttons:hover {
+    transform: translate(0rem, -0.375rem);
+    box-shadow: 0rem 0.313rem 0rem 0rem rgb(32, 32, 32);
+    cursor: pointer;
+    transition: border-width 0.1s ease, transform 0.1s ease, margin-bottom 0.1s ease, box-shadow 0.1s ease;
+}
+
+.buttons:active {
+    transform: translate(0rem, -0.188rem);
+    box-shadow: 0rem 0.125rem 0rem 0rem rgb(32, 32, 32);
+    transition: border-width 0.1s ease, transform 0.1s ease, margin-bottom 0.1s ease, box-shadow 0.1s ease;
+}
+
+.posters {
+    display: grid;
+    margin: 0.625rem auto auto auto;
+    grid-gap: 0.938rem;
+    justify-content: space-around;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.p1 {
+    background: url(./poster1.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    grid-column: 1 / 3;
+    border-bottom: 0.125rem solid #a70000;
+    border-top: 0.125rem solid #a70000;
+    color: white;
+    padding: 0.5rem;
+    font-family: "Bebas Neue";
+    font-size: 2rem;
+    text-shadow: rgb(255, 51, 51) 0.125rem 0.125rem;
+    transition: border-width 0.2s ease, transform 0.2s ease, margin-bottom 0.2s ease, box-shadow 0.2s ease;
+}
+
+.p2 {
+    background: url(./poster2.webp);
+    background-size: cover;
+    grid-column: 3;
+    border-bottom: 0.125rem solid #a70000;
+    border-top: 0.125rem solid #a70000;
+    color: white;
+    padding: 0.5rem;
+    font-family: "Bebas Neue";
+    font-size: 2rem;
+    text-shadow: rgb(255, 51, 51) 0.125rem 0.125rem;
+    transition: border-width 0.2s ease, transform 0.2s ease, margin-bottom 0.2s ease, box-shadow 0.2s ease;
+}
+
+.p3 {
+    background: url(./poster3.jpg);
+    grid-column: 4;
+    grid-row: 1 / 3;
+    background-size: cover;
+    background-position: 40% 0%;
+    border-bottom: 0.125rem solid #a70000;
+    border-top: 0.125rem solid #a70000;
+    color: white;
+    padding: 0.5rem;
+    font-family: "Bebas Neue";
+    font-size: 2rem;
+    text-shadow: rgb(255, 51, 51) 0.125rem 0.125rem;
+    transition: border-width 0.2s ease, transform 0.2s ease, margin-bottom 0.2s ease, box-shadow 0.2s ease;
+}
+
+.p4 {
+    background: url(./poster6.jpg);
+    background-size: cover;
+    grid-column: 1;
+    border-bottom: 0.125rem solid #a70000;
+    border-top: 0.125rem solid #a70000;
+    color: white;
+    padding: 0.5rem;
+    font-family: "Bebas Neue";
+    font-size: 2rem;
+    text-shadow: rgb(255, 51, 51) 0.125rem 0.125rem;
+    transition: border-width 0.2s ease, transform 0.2s ease, margin-bottom 0.2s ease, box-shadow 0.2s ease;
+}
+
+.p5 {
+    background: url(./poster5.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    grid-column: 2 / 4;
+    border-bottom: 0.125rem solid #a70000;
+    border-top: 0.125rem solid #a70000;
+    color: white;
+    padding: 0.5rem;
+    font-family: "Bebas Neue";
+    font-size: 2rem;
+    text-shadow: rgb(255, 51, 51) 0.125rem 0.125rem;
+    transition: border-width 0.2s ease, transform 0.2s ease, margin-bottom 0.2s ease, box-shadow 0.2s ease;
+}
+
+.p6 {
+    background: url(./poster4.jpg);
+    background-size: cover;
+    background-position: 50% 80%;
+    grid-column: 1 / 5;
+    width: auto;
+    height: 9.375rem;
+    border-bottom: 0.125rem solid #a70000;
+    border-top: 0.125rem solid #a70000;
+    color: white;
+    padding: 0.5rem;
+    font-family: "Bebas Neue";
+    font-size: 2rem;
+    text-shadow: rgb(255, 51, 51) 0.125rem 0.125rem;
+    transition: border-width 0.2s ease, transform 0.2s ease, margin-bottom 0.2s ease, box-shadow 0.2s ease;
+}
+
+.p1:hover, .p2:hover, .p3:hover, .p4:hover, .p5:hover, .p6:hover {
+    box-shadow:rgb(255, 51, 51) 0rem 0rem 1.25rem;
+    color:rgb(255, 230, 0);
+    transition: border-width 0.2s ease, transform 0.2s ease, margin-bottom 0.2s ease, box-shadow 0.2s ease;
+}
+
+.howto {
+    font-family: "Teko";
+    font-size: 1.4rem;
+    text-align: center;
+    font-weight: 0rem;
+    letter-spacing: 0.188rem;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 0.938rem;
+    color: white;
+    border-bottom: 0.125rem solid #a70000;
+    border-top: 0.125rem solid #a70000;
+}
+
+.howto2 {
+    font-family: "Teko";
+    font-size: 1.1rem;
+    text-align: center;
+    font-weight: 0rem;
+    letter-spacing: 0.125rem;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 0.625rem;
+    color: white;
+    border-bottom: 0.125rem solid #a70000;
+    border-top: 0.125rem solid #a70000;
+    margin-top: -0.938rem;
+}
+
+.email {
+    color: rgb(255, 230, 0);
+}
+
+.map {
+    margin-top: -0.938rem;
+    width: 100%;
+    height: 18.75rem;
+}
+
+.h2table {
+    font-family: "Teko";
+    font-size: 1.3rem;
+    text-align: center;
+    font-weight: 0rem;
+    letter-spacing: 0.125rem;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border-bottom: 0.125rem solid #a70000;
+    border-top: 0.125rem solid #a70000;
+    margin-bottom: 0.188rem;
+    margin-top: 0.188rem;
+}
+
+.table {
+    width: 100%;
+    padding-top: 0.625rem;
+}
+
+.tabledays {
+    font-family: "Teko";
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: 0rem;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+}
+
+.tableschedule {
+    font-family: "Arial";
+    font-size: 0.7rem;
+    text-align: left;
+    font-weight: 0rem;
+    background: rgba(126, 0, 0, 0.6);
+    color: white;
+}
+
+.tableschedule2 {
+    font-family: "Arial";
+    font-size: 0.7rem;
+    text-align: left;
+    font-weight: 0rem;
+    background: rgba(0, 70, 199, 0.548);
+    color: white;
+}
+
+.h2_prices {
+    font-family: "Teko";
+    text-align: center;
+    font-size: 2rem;
+    text-shadow: 0rem 0.188rem rgba(255, 0, 0, 0.438);
+    background-color: rgba(0, 0, 0, 0.247)
+}
+
+.subscriptions {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.silver, .gold, .platinum {
+    background-color: rgba(0, 0, 0, 0.486);
+    text-align: center;
+    font-family: "Arial";
+    font-size: 0.9rem;
+    padding: 0.625rem;
+    border-bottom: 0.125rem solid #a70000;
+    border-top: 0.125rem solid #a70000;
+    transition: border-width 0.2s ease, transform 0.2s ease, margin-bottom 0.2s ease, box-shadow 0.2s ease;
+}
+
+.silverstar {
+    background-image: url(./silver.png);
+    background-size: cover;
+    width: 1.875rem;
+    height: 1.875rem;
+}
+
+.goldstar {
+    background-image: url(./gold.png);
+    background-size: cover;
+    width: 1.875rem;
+    height: 1.875rem;
+}
+
+.platinumstar {
+    background-image: url(./platinum.png);
+    background-size: cover;
+    width: 1.875rem;
+    height: 1.875rem;
+}
+
+.silver {
+    color: rgb(206, 206, 206);
+}
+
+.gold {
+    color: rgb(255, 242, 125);
+}
+
+.platinum {
+    color: rgb(159, 192, 255);
+}
+
+.h3_prices {
+    font-family: "Teko";
+    font-size: 1.6rem;
+    color: white;
+    text-shadow: 0.188rem 0.188rem rgb(189, 0, 0);
+}
+
+.silver:hover {
+    box-shadow: 0rem 0rem 1.875rem rgb(255, 255, 255);
+    cursor: pointer;
+    transition: border-width 0.2s ease, transform 0.2s ease, margin-bottom 0.2s ease, box-shadow 0.2s ease;
+}
+
+.gold:hover {
+    box-shadow: 0rem 0rem 1.875rem rgb(255, 242, 125);
+    cursor: pointer;
+    transition: border-width 0.2s ease, transform 0.2s ease, margin-bottom 0.2s ease, box-shadow 0.2s ease;
+}
+
+.platinum:hover {
+    box-shadow: 0rem 0rem 1.875rem rgb(159, 192, 255);
+    cursor: pointer;
+    transition: border-width 0.2s ease, transform 0.2s ease, margin-bottom 0.2s ease, box-shadow 0.2s ease;
+}
+
+.h3_requirements {
+    font-family: "Tourney";
+    font-size: 2rem;
+    color: black;
+}
+
+.h4_requirements {
+    font-family: "Tourney";
+    font-size: 1.3rem;
+    color: black;
+}
+
+.requirements_list {
+    font-family: "Teko";
+    font-size: 1.3rem;
+}
+
+.requirements {
+    border-bottom: 0.25rem solid #00000046;
+    border-top: 0.25rem solid #00000046;
+    margin: 1.875rem 0rem 3.75rem 0rem;
+}
+
+@media only screen and (max-width: 600px) {
+
+    html {
+        max-width: 100%;
+        min-width: 30rem;
+        margin: 0rem;
+    }
+
+    .main_nav {
+        position: sticky;
+        background: rgb(255, 0, 0);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 0.3rem 1rem;
+        margin: 0rem;
+        border-bottom: 0rem solid #a70000;
+        border-top: 0rem solid #a70000;
+    }
+    
+    .h1_nav {
+        font-family: "Tourney";
+        color: white;
+        font-size: 1.3rem;
+        width: 3.75rem;
+        margin: 0rem;
+    }
+    
+    .buttons_nav {
+        word-spacing: 0rem;
+    }
+    
+    .buttons {
+        font-family: "Bebas Neue";
+        font-size: 1.2rem;
+        color: rgb(0, 0, 0);
+        background-color: #ffffff;
+        border-radius: 0.2rem;
+        margin: 0rem 0rem 0rem 1rem;
+        padding: 0.5rem;
+    }
+    
+    .silver, .gold, .platinum {
+        margin: 0.1rem;
+    }
+}
